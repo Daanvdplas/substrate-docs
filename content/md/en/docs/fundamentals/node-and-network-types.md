@@ -48,7 +48,7 @@ You can configure the number of blocks a full node retains.
 
 Although older blocks are discarded, full nodes retain all of the [block headers](/reference/glossary/#header) from the genesis block to the most recent block to validate that the state is correct.
 Because the full node has access to all of the block headers, it can be used to rebuild the state of the entire blockchain by executing all of the blocks from the genesis block.
-Thus it requires much more computation to retrieve information about some previous state, and an archive should generally be used instead.
+However it requires much more computation to retrieve information about some previous state, and an archive should generally be used instead.
 
 Full nodes allow you to read the current state of the chain and to submit and validate transactions directly on the network.
 By discarding state from older blocks, a full node requires much less disk space than an archive node.
