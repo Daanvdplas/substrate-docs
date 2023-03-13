@@ -22,7 +22,7 @@ To create a project:
 3. Create a new Rust project for the `collectibles` pallet by running the following command:
    
    ```bash
-   cargo new collectibles
+   cargo new collectibles --lib
    ```
 
    Note that `cargo` warns you that the new package isn't in the current workspace and there are a few different ways to fix the issue.
@@ -39,21 +39,11 @@ To create a project:
    ```text
    ├── Cargo.toml
    └── src
-    └── main.rs
+    └── lib.rs
    ```
    
    In Rust, the `Cargo.toml` file for each package is called the package manifest and it defines configuration settings and dependencies that the package requires.
    The `Cargo.toml` file in the `workspace-node-template/pallets/collectibles` folder defines the dependencies for the `collectibles` package you are building.
-
-   By convention, the source code for Rust projects in Substrate—including pallet modules—is typically in the `src/lib.rs` file.
-   By default, Cargo creates a template `src/main.rs` file for new projects.
-   For clarity in the workshop, let's rename the main source file for the new module. 
-  
-6. Rename `src/main.rs` source file by running the following command:
-   
-   ```bash
-   mv src/main.rs src/lib.rs
-   ```
 
    Now that your project files are in place, let's fix that issue that `cargo` warned you about by adding the new project to the current workspace.
 
